@@ -34,7 +34,7 @@ h2. Usage
 @PPTVideo.exe <infile> <outfile> [-d]@
 
 
-Use the '-d' switch to *delete the infile*, the outfile format is WMV and the in/out files can be relational paths to the working directory or fully qualified.
+Use the '-d' switch to *delete the infile*, the outfile format is MP4 and the in/out files can be relational paths to the working directory or fully qualified.
 
 The resulting file is a perfect conversion and works much better than commercial tools that attempt to do the same thing (Probably because we are using Microsoft's conversion tool, this just provides command line access).
 I then use FFMPEG to convert the video into any other required format, in this case WEBM for use on the web.

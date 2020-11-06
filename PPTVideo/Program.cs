@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 
 using Microsoft.Office.Core;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
-using System.Runtime.InteropServices;
-using System.IO;
 
 // Based on article
 // http://support.microsoft.com/kb/303718
@@ -30,7 +26,7 @@ namespace PPTVideo
 				//objApp.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
 				
 				objPres = objApp.Presentations.Open(Path.GetFullPath(args[0]), MsoTriState.msoTrue, MsoTriState.msoTrue, MsoTriState.msoTrue);
-				objPres.SaveAs(Path.GetFullPath(args[1]), PowerPoint.PpSaveAsFileType.ppSaveAsWMV, MsoTriState.msoTriStateMixed);
+				objPres.SaveAs(Path.GetFullPath(args[1]), PowerPoint.PpSaveAsFileType.ppSaveAsMP4, MsoTriState.msoTriStateMixed);
 				long len = 0;
 				do{
 					System.Threading.Thread.Sleep(500);
